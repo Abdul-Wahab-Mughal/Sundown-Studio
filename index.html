@@ -15,16 +15,22 @@
   </head>
   <body>
     <!-- Loading -->
-    <div class="loading w-100 position-fixed overflow-hidden">
+    <div class="loading w-100 position-fixed overflow-hidden bg-black">
       <div
         class="loader-wrapper w-100 h-100 d-flex justify-content-center align-items-center position-relative"
       >
-        <div class="loader_text">Environments</div>
-        <div class="loader_text">Experiences</div>
-        <div class="loader_text">Content</div>
+        <div class="loader_text position-absolute fw-bold text-nowrap">
+          Environments
+        </div>
+        <div class="loader_text position-absolute fw-bold text-nowrap">
+          Experiences
+        </div>
+        <div class="loader_text position-absolute fw-bold text-nowrap">
+          Content
+        </div>
       </div>
     </div>
-    <div class="main bg-white z-1">
+    <div class="main bg-white z-1 overflow-hidden">
       <!-- Navbar -->
       <nav class="d-flex p-3 p-sm-5">
         <img
@@ -63,7 +69,7 @@
             end-to-end experiences and environments.
           </h2>
           <h1
-            class="m-0 fw-bold text-center me-0 me-sm-5 mx-0 mx-sm-5 text-sm-end"
+            class="m-0 fw-bold text-center me-0 me-sm-5 mx-0 mx-sm-5 text-sm-end text-uppercase"
           >
             spaces <br />
             that <br />
@@ -72,13 +78,19 @@
         </div>
         <hr />
 
-        <div class="video mx-3 mx-sm-4">
-          <div class="color_back">
+        <div class="video mx-3 mx-sm- position-relative z-1">
+          <div class="color_back position-absolute z-n1">
             <div class="cb-1"></div>
             <div class="cb-2"></div>
             <div class="cb-3"></div>
           </div>
-          <video src="./image/b7e94ef4.mp4" autoplay loop muted></video>
+          <video
+            class="w-100 rounded-5"
+            src="./image/b7e94ef4.mp4"
+            autoplay
+            loop
+            muted
+          ></video>
         </div>
       </header>
 
@@ -169,6 +181,8 @@
 
       <!-- FEATURED PROJECTS -->
       <section class="featured-project">
+        <div id="card-display"></div>
+
         <div class="title d-flex gap-3 align-items-center m-5">
           <div></div>
           <div class="fs-3">FEATURED PROJECTS</div>
@@ -371,23 +385,28 @@
           id="design"
           class="card-item bg-black h-100 rounded-4 d-flex flex-column flex-sm-row text-white position-absolute z-1"
         >
-          <div class="item-text p-5 d-flex flex-column justify-content-center">
+          <div
+            class="item-text p-5 flex-1 d-flex flex-column justify-content-center"
+          >
             <div class="w-50 display-3 fw-bold pb-5">
               <div
                 id="design-0"
                 class="border-3 border-start ps-3 border-danger"
+                role="button"
               >
                 Design
               </div>
               <div
                 id="project-0"
                 class="border-3 border-start ps-3 border-secondary text-secondary-emphasis"
+                role="button"
               >
                 Project
               </div>
               <div
                 id="execution-0"
                 class="border-3 border-start ps-3 border-secondary text-secondary-emphasis"
+                role="button"
               >
                 Execution
               </div>
@@ -400,7 +419,7 @@
               architectural drawings to 3D renderings.
             </p>
           </div>
-          <div class="img">
+          <div class="img flex-1">
             <img
               class="w-100 h-100 rounded-4 object-fit-cover"
               src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-800.jpg"
@@ -503,10 +522,10 @@
         class="h-100 d-flex flex-column justify-content-between position-sticky bottom-0"
       >
         <div class="position-fixed bottom-0">
-          <div class="footer position-absolute top-0">
-            <div class="cs position-relative">
-              <div></div>
-              <div></div>
+          <div class="footer w-100 h-100 position-absolute top-0">
+            <div class="cs w-100 h-100 position-relative">
+              <div class="position-absolute h-100"></div>
+              <div class="position-absolute h-100"></div>
             </div>
           </div>
           <div
