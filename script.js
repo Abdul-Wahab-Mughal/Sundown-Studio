@@ -63,11 +63,11 @@ function Featured() {
     document.getElementById("card-display").innerHTML = cardImg
       .map((e, i) => {
         let ctTotal = cardTop[i].offsetTop - 75;
-        return `<div style="display:none">
+        return `<div style="opacity: 0; transition: 0.5s;">
           <img
             class="m-3 m-sm-0 object-fit-cover rounded-4 position-absolute start-50 z-3 pe-none "
             src="${e}"
-            style="top: ${ctTotal}px; width: 300px; height: 400px"
+            style="top: ${ctTotal}px; width: 300px; height: 400px;"
             alt=""
           />
         </div>`;
@@ -80,10 +80,12 @@ function Featured() {
       if (c <= 6) {
         cardTop[c].id = c;
         cardTop[c].addEventListener("mouseenter", (e) => {
-          ci[e.target.id].style = "display: block";
+          // ci[e.target.id].style = "display: block;";
+          ci[e.target.id].style.opacity = 1;
         });
         cardTop[c].addEventListener("mouseleave", (e) => {
-          ci[e.target.id].style = "display: none";
+          // ci[e.target.id].style = "display: none";
+          ci[e.target.id].style.opacity = 0;
         });
       }
     }
